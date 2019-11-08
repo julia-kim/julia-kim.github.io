@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julia Kim</title>
+<!--
+            _
+  o        | | o           |    o
+    _      | |     _       | /      _  _  _
+  |/ |  |  |/  |  / \      |/   |  / |/ |/ |
+ /|  |_/|_/|__/|_/\_/\_/ o | \_/|_/  |  |  |_/ 
+/ |
+\_|
+-->
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://kit.fontawesome.com/707c311a00.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <noscript>This site requires JavaScript.</noscript>
+  <div class="pointer"></div>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+  </label>
+  <header>
+    <h1>
+      <a href="/" class="h1">
+        <span class="letter">j</span><!--
+        --><span class="letter">u</span><!--
+        --><span class="letter">l</span><!--
+        --><span class="letter">i</span><!--
+        --><span class="letter">a</span><!--
+        --><span class="letter">.</span><!--
+        --><span class="letter">k</span><!--
+        --><span class="letter">i</span><!--
+        --><span class="letter">m</span>
+      </a>
+    </h1>
+    <nav>
+      <ul class="nav">
+        <li class="nav__item"><a href="/">Home</a></li>
+        <li class="nav__item"><a href="#about">About</a></li>
+        <li class="nav__item"><a href="#projects">Projects</a></li>
+        <li class="nav__item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h2 id="about">Hello.</h2>
+    <div class="about">
+      <p>My name is Julia. A millenial with an old soul.</p>
+      <p>A self-taught, aspiring web developer with no real-world experience and a love for learning.</p>
+      <p>This website is my playground - a place where I can experiment and play. This site will always be a work in progress.</p>
+      <p>Right now I'm working on building a solid foundation with vanilla <code>JS</code>.</p>
+      <p><b><a class="link" href="mailto:minhee68@yahoo.com?">Hire me</a>.</b></p>
+    </div>
+    <h2 id="projects">Some stuff.</h2>
+    <div class="wrapper">
+      <div class="tab">
+        <button class="tablinks" onclick="openProject(event, 'project-1')" id="defaultOpen">Calculator</button>
+        <button class="tablinks" onclick="openProject(event, 'project-2')">Korean Flag</button>
+        <button class="tablinks" onclick="openProject(event, 'project-3')">Writer Website</button>
+      </div>
+      <div id="project-1" class="tabcontent">
+        <iframe class="codepen" height="500" style="width: 100%;" scrolling="no" title="Calculator"
+          src="https://codepen.io/juliakim/embed/QWWQraE?height=265&theme-id=dark&default-tab=result" frameborder="no"
+          allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/juliakim/pen/QWWQraE'>Calculator</a> by Julia Kim
+          (<a href='https://codepen.io/juliakim'>@juliakim</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+      </div>
+      <div id="project-2" class="tabcontent">
+        <iframe class="codepen" height="500" style="width: 100%;" scrolling="no" title="South Korean Flag"
+          src="https://codepen.io/juliakim/embed/KKKQRea?height=265&theme-id=dark&default-tab=result" frameborder="no"
+          allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/juliakim/pen/KKKQRea'>South Korean Flag</a> by Julia Kim
+          (<a href='https://codepen.io/juliakim'>@juliakim</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+      </div>
+      <div id="project-3" class="tabcontent">
+        <a href="https://tietnguyen.com/" target="_blank" rel="noopener noreferrer" title="A online writing portfolio made for a dear friend"
+          target="_blank"><img src="img/writer.png"></a>
+      </div>
+    </div>
+    <h2 id="contact">Get in touch.</h2>
+    <div class="social">
+      <a href="https://github.com/julia-kim" target="_blank" rel="noopener noreferrer" class="share-btn github">
+        <i class="fab fa-github-alt"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100011943642383" target="_blank" rel="noopener noreferrer" class="share-btn facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/2facedsign/" target="_blank" rel="noopener noreferrer" class="share-btn instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://codepen.io/juliakim" target="_blank" rel="noopener noreferrer" class="share-btn codepen">
+        <i class="fab fa-codepen"></i>
+      </a>
+    </div>
+    <p>
+      <b><a href="mailto:minhee68@yahoo.com?subject=Hi%20Julia" class="link">hello@julia.kim</a></b>
+    </p>
+  </main>
+  <footer>
+    <span class="footer-txt">Julia Kim | &#9400; 2019</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
