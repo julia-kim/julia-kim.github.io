@@ -70,7 +70,7 @@ footer {
 }
 
 .container__item {
-  margin: 0 auto 35px
+  margin: 0 auto 2.188em
 }
 
 a {
@@ -199,7 +199,8 @@ nav li a:hover:after {
 ------------------------- */
 .about {
   line-height: 1.7;
-  max-width: 100%
+  max-width: 100%;
+  padding: 0 0.25em
 }
 
 .about p:last-child {
@@ -214,16 +215,15 @@ img {
 }
 
 .wrapper {
-  box-shadow: 1em 1em var(--pink);
   font-size: 1rem;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0
+  padding: 0 0.25em
 }
 
 .tab {
   background-color: var(--white);
-  border: 0.250em solid var(--silver);
+  border: 0.25em solid var(--silver);
   margin: 0;
   overflow: hidden;
   width: 100%
@@ -243,8 +243,8 @@ img {
 }
 
 .tab button.active {
-  border-left: 0.250em solid var(--silver);
-  border-right: 0.250em solid var(--silver)
+  border-left: 0.25em solid var(--silver);
+  border-right: 0.25em solid var(--silver)
 }
 
 .tab button:first-child.active {
@@ -257,7 +257,7 @@ img {
 
 .tabcontent {
   background-color: var(--white);
-  border: 0.250em solid var(--silver);
+  border: 0.25em solid var(--silver);
   border-top: none;
   display: none;
   margin: 0 auto;
@@ -287,7 +287,7 @@ img {
 }
 
 footer {
-  font-size: 0.750em
+  font-size: 0.75em
 }
 
 /* responsive
@@ -298,6 +298,7 @@ footer {
   }
 
   .wrapper {
+    box-shadow: 1em 1em var(--pink);
     width: 50%;
   }
 }
