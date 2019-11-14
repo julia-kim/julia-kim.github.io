@@ -70,7 +70,10 @@ footer {
 }
 
 .container__item {
-  margin: 0 auto 2.188em
+  font-size: 1rem;
+  margin: 0 auto 2.188em;
+  max-width: 100%;
+  padding: 0 0.5em
 }
 
 a {
@@ -106,7 +109,8 @@ h3 a {
 ------------------------- */
 header {
   display: block;
-  margin-bottom: 1.563em
+  margin-bottom: 1.563em;
+  padding: 0 0.25em;
 }
 
 .h1 {
@@ -199,7 +203,6 @@ nav li a:hover:after {
 ------------------------- */
 .about {
   line-height: 1.7;
-  max-width: 100%;
   padding: 0 0.25em
 }
 
@@ -215,10 +218,7 @@ img {
 }
 
 .wrapper {
-  font-size: 1rem;
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 0.25em
+  margin: 0 auto
 }
 
 .tab {
