@@ -73,7 +73,6 @@ footer {
   font-size: 1rem;
   margin: 0 auto 2.188em;
   max-width: 100%;
-  padding: 0 1em
 }
 
 a {
@@ -202,7 +201,7 @@ nav li a:hover:after {
 ------------------------- */
 .about {
   line-height: 1.7;
-  padding: 0 0.25em
+  padding: 0 1.5em
 }
 
 .about p:last-child {
@@ -217,7 +216,8 @@ img {
 }
 
 .wrapper {
-  margin: 0 auto
+  margin: 0 auto;
+  padding: 0 0.5em
 }
 
 .tab {
