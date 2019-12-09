@@ -201,7 +201,7 @@ nav li a:hover:after {
 ------------------------- */
 .about {
   line-height: 1.7;
-  padding: 0 1.5em
+  padding: 0 1em
 }
 
 .about p:last-child {
@@ -212,12 +212,13 @@ nav li a:hover:after {
 ------------------------- */
 img {
   display: block;
-  width: 100%
+  margin: 0 auto;
+  max-width: 100%
 }
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 0.5em
+  padding: 0
 }
 
 .tab {
@@ -258,7 +259,6 @@ img {
   background-color: var(--white);
   border: 0.25em solid var(--silver);
   border-top: none;
-  display: none;
   margin: 0 auto;
   padding: 0;
   width: 100%

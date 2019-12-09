@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIM Away Message</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="bar">
+      <p>Edit Away Message</p>
+      <div class="close">&#10006;</div>
+    </div>
+    <div class="enter-label">
+      <label>Enter label:</label>
+      <input type="text" name="label" value="away~">
+      <div class="dropdown">
+        <span class="caret"></span>
+      </div>
+    </div>
+    <label>Enter new Away message:</label>
+    <div class="text-editor">
+      <div class="box">
+        <p class="text-color">A</p>
+        <p class="background-color">A</p>
+      </div>
+      <div class="box">
+        <p class="small-text">A</p>
+        <p class="medium-text">A</p>
+        <p class="large-text">A</p>
+      </div>
+      <div class="box">
+        <p class="bold-text">B</p>
+        <p class="italic-text">I</p>
+        <p class="underline-text">U</p>
+      </div>
+      <div class="box">
+        <p class="link-text">link</p>
+        <img src="smileys/cool.gif" class="toggler">
+      </div>
+    </div>
+    <div class="smileys">
+      <img class="smiley" src="smileys/happy.gif">
+      <img class="smiley" src="smileys/sad.gif">
+      <img class="smiley" src="smileys/wink.gif">
+      <img class="smiley" src="smileys/tongueout.gif">
+      <img class="smiley" src="smileys/shocked.gif">
+      <img class="smiley" src="smileys/redlips.gif">
+      <img class="smiley" src="smileys/angry.gif">
+      <img class="smiley" src="smileys/cool.gif">
+      <img class="smiley" src="smileys/indifferent.gif">
+      <img class="smiley" src="smileys/footinmouth.gif">
+      <img class="smiley" src="smileys/embarrassed.gif">
+      <img class="smiley" src="smileys/angel.gif">
+      <img class="smiley" src="smileys/confused.gif">
+      <img class="smiley" src="smileys/crying.gif">
+      <img class="smiley" src="smileys/nospeak.gif">
+      <img class="smiley" src="smileys/biggrin.gif">
+    </div>
+    <textarea rows="4">brb, getting my life in order.</textarea>
+    <div class="special">
+      <p>Special Characters:</p>
+      <p>%n = Screen Name of Buddy</p>
+      <p>%d = Current date</p>
+      <p>%t = Current time</p>
+    </div>
+    <div class="later">
+      <label>Save for later use</label>
+      <input type="checkbox" class="checkbox">
+    </div>
+    <div class="buttons">
+      <button>I'm Away</button>
+      <button>Cancel</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
