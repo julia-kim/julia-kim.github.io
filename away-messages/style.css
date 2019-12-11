@@ -1,5 +1,21 @@
-:root {
-  --grey: #bdbdbd;
+@font-face {
+  font-family: Windows;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/windows-regular-webfonts/windows-regular.eot');
+  src: url('fonts/windows-regular-webfonts/windows-regular.woff') format('woff'),
+       url('fonts/windows-regular-webfonts/windows-regular.woff2') format('woff2'),
+       url('fonts/windows-regular-webfonts/windows-regular.ttf') format('truetype'),
+       url('fonts/windows-regular-webfonts/windows-regular.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Windows Bold';
+  src: url('fonts/windows-bold-webfonts/windows-bold.eot');
+  src: url('fonts/windows-bold-webfonts/windows-bold.woff') format('woff'),
+       url('fonts/windows-bold-webfonts/windows-bold.woff2') format('woff2'),
+       url('fonts/windows-bold-webfonts/windows-bold.ttf') format('truetype'),
+       url('fonts/windows-bold-webfonts/windows-bold.svg') format('svg');
 }
 
 *,
@@ -16,20 +32,17 @@ body {
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 0.75em;
+  font-family: Windows, sans-serif;
+  font-size: 0.8rem;
 }
 
-textarea {
-  display: block;
-  font-family: 'Times New Roman', serif;
-  margin: auto;
-  resize: none;
-  width: 100%;
+.hidden {
+  display: none;
+  overflow: hidden;
 }
 
 .container {
-  background: var(--grey);
+  background: #bdbdbd;
   border: 1px solid gray;
   height: 335px;
   margin: 100px auto;
@@ -37,61 +50,107 @@ textarea {
   width: 400px;
 }
 
+.container, 
+.caret,
+.close,
+.btn {
+  border-bottom: 1px solid #7b7b7b;
+  border-left: 1px solid white;
+  border-right: 1px solid #7b7b7b;
+  border-top: 1px solid white;
+  box-shadow: 1px 1px 1px black;
+}
+
 .bar {
   background-color: #0060a3;
   background: linear-gradient(90deg, #0b2366 0%, #0060a3 35%, #aacce7 100%);
   color: white;
-  font-weight: 700;
-  height: 32px;
-  line-height: 32px;
-  margin: auto -18px 10px;
+  font-family: 'Windows Bold', sans-serif;
+  font-size: 0.875rem;
+  height: 18px;
+  line-height: 18px;
+  margin: 1px -17px 10px;
   padding-left: 3px;
   position: relative;
-  width: calc(100% + 36px);
+  width: calc(100% + 34px);
 }
 
 .close {
-  background: #d6d6ce;
+  background: #bdbdbd;
   color: black;
-  font-size: 1rem;
-  font-weight: 700;
-  height: 24px;
-  line-height: normal;
+  cursor: pointer;
+  font-size: 0.688rem;
+  height: 14px;
+  line-height: 12px;
   position: absolute;
-  right: 4px;
+  right: 2px;
   text-align: center;
-  top: 4px;
-  width: 24px;
+  top: 2px;
+  width: 16px;
 }
 
-.enter-label {
+.msg-label {
   margin-bottom: 10px;
 }
 
+.label {
+  border-bottom: 1px solid #dedede;
+  border-left: 1px solid black;
+  border-right: 1px solid #dedede;
+  border-top: 1px solid black;
+  height: 24px;
+  margin-left: 35px;
+  width: 250px;
+}
+
 .dropdown {
-  border: 1px solid gray;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
+  position: relative;
 }
 
 .caret {
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid black;
-  display: inline-block;
+  background-color: #bdbdbd;
+  cursor: pointer;
+  height: 21px;
+  position: absolute;
+  right: 5px;
+  top: -23px;
+  width: 16px;
+}
+
+.caret:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid black;
+  content: '';
+  position: absolute;
+  right: 3px;
+  top: 8px;
 }
 
 .text-editor {
-  border: 1px outset white;
-  font-family: serif;
+  background-color: white;
+  border-bottom: 1px solid white;
+  border-right:  1px solid white;
+  outline: 1px solid white;
+}
+
+.edit-bar {
+  background-color: #bdbdbd;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  cursor: default;
+  font-family: 'Times New Roman', serif;
   font-weight: 700;
-  margin: 10px auto 1px;
+  margin: 10px auto 3px;
+  outline: 1px solid #7b7b7b;
   text-align: center;
   width: 100%;
 }
 
 .box {
-  border-left: 1px groove white;
+  border-left: 1px groove #7b7b7b;
   display: inline;
 }
 
@@ -109,7 +168,7 @@ textarea {
   color: blue;
 }
 
-.background-color {
+.bg-color {
   background: blue;
   color: white;
   width: auto;
@@ -135,15 +194,21 @@ textarea {
   text-decoration: underline;
 }
 
+.style-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Times New Roman', serif;
+  padding: 0 6px;
+}
+
 .link-text {
   color: blue;
   text-decoration: underline;
 }
 
 .smileys {
-  background: var(--grey);
+  background: #bdbdbd;
   border: 1px solid gray;
-  display: none;
   position: absolute;
   width: 92px;
 }
@@ -152,8 +217,21 @@ textarea {
   padding: 2px 4px;
 }
 
+.text-field {
+  background-color: white;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  display: block;
+  font-family: 'Times New Roman', serif;
+  height: 90px;
+  margin: auto;
+  outline: 1px inset #7b7b7b;
+  padding: 2px;
+  width: 100%;
+}
+
 .special {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .later {
@@ -163,20 +241,31 @@ textarea {
 
 .checkbox {
   display: inline-block;
-  vertical-align: text-top;
+  position: relative;
 }
 
-.buttons {
+.btns {
   text-align: center;
 }
 
-button {
-  background: var(--grey);
-  border-bottom: 1px solid #848484;
-  border-left: 1px solid white;
-  border-right: 1px solid #848484;
-  border-top: 1px solid white;
+.btn {
+  background: #bdbdbd;
+  font-family: Windows, sans-serif;
+  height: 25px;
   margin: auto 12px;
-  padding: 5px 0;
+  padding-left: 0;
   width: 100px;
+}
+
+.btn:active {
+  padding-left: 1px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+footer {
+  font-family: Arial, sans-serif;
+  margin: 50px
 }
