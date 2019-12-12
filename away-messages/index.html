@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIM Away Message</title>
+  <link rel="icon" type="image/png" href="images/running-man-favicon.ico">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -17,7 +18,7 @@
     </div>
     <div class="msg-label">
       <label>Enter label:</label>
-      <input type="text" name="label" class="label" value="away~">
+      <input type="text" name="Label" class="label" value="away~">
       <div class="dropdown">
         <span class="caret"></span>
       </div>
@@ -26,54 +27,52 @@
     <div class="text-editor">
       <div class="edit-bar">
         <div class="box">
-          <input name="Color Picker" id="colorPicker" type="color" class="hidden" onchange="getColor(this)">
-          <p class="text-color" title="Text Color">A</p>
-          <input name="BG Color Picker" id="bgColorPicker" type="color" class="hidden"
+          <input type="color" name="Color Picker" id="colorPicker" class="hidden" onchange="getColor(this)">
+          <button class="style-btn text-color" title="Text Color">A</button>
+          <input type="color" name="BG Color Picker" id="bgColorPicker" class="hidden"
             onchange="getBackgroundColor(this)">
-          <p class="bg-color" title="Background Color">A</p>
+          <button class="style-btn bg-color" title="Background Color">A</button>
         </div>
         <div class="box">
-          <p class="small-text" title="Decrease Font Size">A</p>
-          <p class="medium-text">A</p>
-          <p class="large-text" title="Increase Font Size">A</p>
+          <button class="style-btn small-text" title="Decrease Font Size" onclick="resizeText(-1)">A</button>
+          <button class="style-btn medium-text" title="Font">A</button>
+          <button class="style-btn large-text" title="Increase Font Size" onclick="resizeText(1)">A</button>
         </div>
         <div class="box">
-          <button class="style-btn bold-text" onclick="document.execCommand('bold', false, null);"
-            title="Bold">B
+          <button class="style-btn bold-text" title="Bold" onclick="document.execCommand('bold', false, null);">B
           </button>
-          <button class="style-btn italic-text" onclick="document.execCommand('italic', false, null);"
-            title="Italic">I
+          <button class="style-btn italic-text" title="Italic" onclick="document.execCommand('italic', false, null);">I
           </button>
-          <button class="style-btn underline-text" onclick="document.execCommand('underline', false, null);"
-            title="Underline">U
+          <button class="style-btn underline-text" title="Underline"
+            onclick="document.execCommand('underline', false, null);">U
           </button>
         </div>
         <div class="box">
-          <p class="link-text" onclick="link()" title="Link">link</p>
-          <img src="smileys/cool.gif" class="toggler" title="Smiley">
+          <button class="style-btn link-text" title="Link" onclick="link()">link</button>
+          <img src="images/smileys/cool.gif" class="toggler" title="Smiley">
         </div>
-      </div> 
-      <div class="smileys hidden">
-        <img class="smiley" src="smileys/happy.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/sad.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/wink.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/tongueout.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/shocked.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/redlips.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/angry.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/cool.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/indifferent.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/footinmouth.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/embarrassed.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/angel.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/confused.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/crying.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/nospeak.gif" onclick="getSmiley(this)">
-        <img class="smiley" src="smileys/biggrin.gif" onclick="getSmiley(this)">
       </div>
-      <div contenteditable="true" id="colorful" class="text-field">brb, getting my life in order.</div>
+      <div class="smileys hidden">
+        <img class="smiley" src="images/smileys/happy.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/sad.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/wink.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/tongueout.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/shocked.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/redlips.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/angry.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/cool.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/indifferent.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/footinmouth.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/embarrassed.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/angel.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/confused.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/crying.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/nospeak.gif" onclick="getSmiley(this)">
+        <img class="smiley" src="images/smileys/biggrin.gif" onclick="getSmiley(this)">
+      </div>
+      <div contenteditable="true" id="text-field">brb, getting my life in order.</div>
     </div>
-      <div class="special">
+    <div class="special">
       <p>Special Characters:</p>
       <p>%n = Screen Name of Buddy</p>
       <p>%d = Current date</p>
@@ -83,14 +82,13 @@
       <label>Save for later use</label>
       <input type="checkbox" class="checkbox">
     </div>
-    <div class="btns">
+    <div class="bottom-btns">
       <button class="btn">I'm Away</button>
       <button class="btn">Cancel</button>
     </div>
   </div>
   <footer>
-    <p>play around.</p>
-    <p>not yet fully functional. may not work in your browser.</p>
+    <p>not yet fully functional. some things may not work in your browser.</p>
   </footer>
   <script src="script.js"></script>
 </body>
