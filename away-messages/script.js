@@ -43,6 +43,7 @@ function getBackgroundColor() {
   document.getElementById('text-field').style.backgroundColor = color;
 }
 
+// https://stackoverflow.com/questions/28647614/limit-the-amount-of-times-font-size-can-be-increased-and-decreased
 var minSize = 0.5;
 var maxSize = 5;
 
@@ -139,9 +140,7 @@ function getLinksInSelection() {
 }
 
 function link(type) {
-  var savedSel = saveSelection();
   var url = prompt('Enter URL:', 'http://');
-  restoreSelection(savedSel);
   document.execCommand('CreateLink', false, url);
   var links = getLinksInSelection();
   for (var i = 0; i < links.length; ++i) {
