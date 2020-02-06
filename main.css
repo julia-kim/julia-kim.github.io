@@ -415,8 +415,15 @@ footer {
     color: #fafafa
   }
 
-  a {
+  a,
+  .link,
+  nav li a,
+  .tab button {
   color: #fafafa
+  }
+
+  .letter {
+    -webkit-text-stroke: 0.029em #fafafa
   }
 
   .tab,
