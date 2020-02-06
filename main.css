@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #0d1b1e;
-  --dark-bg: #2d2d2d;
+  --bg: #fff;
+  --text-color: #000;
   --turquoise: #00f5bc;
   --orange: #f8cf48;
   --pink: #fcaae6;
@@ -9,9 +9,13 @@
   --blue: #5d82f9;
   --indigo: #7546f8;
   --silver: #c1c1c1;
-  --white: #fff;
   --transition-duration-base: 0.2s;
   --transition-duration-long: 0.4s
+}
+
+html[data-theme='dark'] {
+  --bg: #000;
+  --text-color: #fff
 }
 
 ::selection {
@@ -21,14 +25,22 @@
 /* mouse trail
 ------------------------- */
 .pointer {
+  -webkit-animation: fadeOut 1s 1;
   animation: fadeOut 1s 1;
   border-radius: 50%;
   height: 40px;
   pointer-events: none;
   position: fixed;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 40px;
   z-index: -1
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 0 }
+  50% { opacity: 0.5 }
+  100% { opacity: 0 }
 }
 
 @keyframes fadeOut {
@@ -42,7 +54,7 @@
 *,
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0
 }
@@ -53,8 +65,8 @@ body {
 }
 
 body {
-  background: var(--white);
-  color: var(--primary-color);
+  background: var(--bg);
+  color: var(--text-color);
   font-family: sans-serif;
   line-height: 1.5
 }
@@ -62,7 +74,7 @@ body {
 div,
 .h1,
 h1,
-h2, 
+h2,
 p,
 .nav,
 footer {
@@ -72,21 +84,21 @@ footer {
 .container__item {
   font-size: 1rem;
   margin: 0 auto 2.188em;
-  max-width: 100%;
+  max-width: 100%
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--text-color);
   text-decoration: none
 }
 
 .link {
   background: var(--violet);
-  color: black
+  color: var(--text-color)
 }
 
 .link:hover {
-  background: #00f5bc
+  background: var(--turquoise)
 }
 
 /* typography
@@ -95,20 +107,11 @@ h2 {
   font-size: 1.5rem
 }
 
-h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5em
-}
-
-h3 a {
-  color: #f9f9f9
-}
-
 /* header
 ------------------------- */
 header {
   display: block;
-  margin-bottom: 1.563em;
+  margin-bottom: 1.563em
 }
 
 .h1 {
@@ -124,19 +127,48 @@ h1 {
   height: 1em;
   letter-spacing: 0.086em;
   text-shadow: 0.071em 0.071em var(--turquoise);
-  -webkit-text-stroke: 0.029em var(--primary-color)
+  -webkit-text-stroke: 0.029em var(--text-color)
 }
 
 .h1:hover span {
+  -webkit-animation: rainbow 6s linear 0s infinite;
   animation: rainbow 6s linear 0s infinite
 }
 
-.h1:hover span:nth-child(2) { animation-delay: -1s }
-.h1:hover span:nth-child(3) { animation-delay: -2s }
-.h1:hover span:nth-child(4) { animation-delay: -3s }
-.h1:hover span:nth-child(6) { animation-delay: -1s }
-.h1:hover span:nth-child(7) { animation-delay: -5s }
-.h1:hover span:nth-child(9) { animation-delay: -4s }
+.h1:hover span:nth-child(2) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s
+}
+.h1:hover span:nth-child(3) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s
+}
+.h1:hover span:nth-child(4) {
+  -webkit-animation-delay: -3s;
+  animation-delay: -3s
+}
+.h1:hover span:nth-child(6) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s
+}
+.h1:hover span:nth-child(7) {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s
+}
+.h1:hover span:nth-child(9) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s
+}
+
+@-webkit-keyframes rainbow {
+  from { text-shadow: 0.071em 0.071em #f00 }
+  16.6% { text-shadow: 0.071em 0.071em #f0f }
+  33.3% { text-shadow: 0.071em 0.071em #00f }
+  50% { text-shadow: 0.071em 0.071em #0ff }
+  66.6% { text-shadow: 0.071em 0.071em #0f0 }
+  83.3% { text-shadow: 0.071em 0.071em #ff0 }
+  to { text-shadow: 0.071em 0.071em #f00 }
+}
 
 @keyframes rainbow {
   from { text-shadow: 0.071em 0.071em #f00 }
@@ -148,7 +180,7 @@ h1 {
   to { text-shadow: 0.071em 0.071em #f00 }
 }
 
-.letter { 
+.letter {
   margin: 0;
   padding: 0
 }
@@ -170,7 +202,7 @@ nav li {
 }
 
 nav li a {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-weight: 400;
   position: relative;
   text-decoration: none;
@@ -222,7 +254,7 @@ img {
 }
 
 .tab {
-  background-color: var(--white);
+  background-color: var(--bg);
   border: 0.25em solid var(--silver);
   margin: 0;
   overflow: hidden;
@@ -231,7 +263,8 @@ img {
 
 .tab button {
   background-color: inherit;
-  border: none; 
+  border: none;
+  color: var(--text-color);
   cursor: pointer;
   float: left;
   outline: none;
@@ -256,7 +289,7 @@ img {
 }
 
 .tabcontent {
-  background-color: var(--white);
+  background-color: var(--bg);
   border: 0.25em solid var(--silver);
   border-top: none;
   margin: 0 auto;
@@ -275,18 +308,87 @@ img {
 }
 
 .share-btn:hover {
+  -webkit-animation: jump 0.3s 2;
   animation: jump 0.3s 2;
   position: relative
 }
 
+@-webkit-keyframes jump {
+  0% { bottom: 0 }
+  50% { bottom: 0.313em }
+  100% { bottom: 0 }
+}
+
 @keyframes jump {
-    0% { bottom: 0 }
-    50% { bottom: 0.313em }
-   100% { bottom: 0 }
+  0% { bottom: 0 }
+  50% { bottom: 0.313em }
+  100% { bottom: 0 }
 }
 
 footer {
   font-size: 0.75em
+}
+
+/* dark mode toggle
+------------------------- */
+.switch {
+  height: 33px;
+  margin: 5px;
+  position: absolute;
+  right: 0;
+  width: 53px
+}
+
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0
+}
+
+.slider {
+  background-color: var(--silver);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: '';
+  height: 29px;
+  left: 2px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 29px
+}
+
+input:checked + .slider {
+  background-color: var(--turquoise)
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px var(--turquoise);
+  box-shadow: 0 0 1px var(--turquoise)
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px)
+}
+
+.slider.round {
+  border-radius: 33px
+}
+
+.slider.round:before {
+  border-radius: 50%
 }
 
 /* responsive
@@ -301,6 +403,7 @@ footer {
   }
 
   .wrapper {
+    -webkit-box-shadow: 1em 1em var(--pink);
     box-shadow: 1em 1em var(--pink);
     width: 50%
   }
