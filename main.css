@@ -128,7 +128,6 @@ h1 {
   height: 1em;
   letter-spacing: 0.086em;
   text-shadow: 0.071em 0.071em var(--turquoise);
-  -webkit-text-stroke: 0.029em var(--text-color)
 }
 
 .h1:hover span {
@@ -183,7 +182,8 @@ h1 {
 
 .letter {
   margin: 0;
-  padding: 0
+  padding: 0;
+  -webkit-text-stroke: 0.029em var(--text-color)
 }
 
 /* navigation
@@ -349,6 +349,7 @@ footer {
 
 .slider {
   background-color: var(--silver);
+  border-radius: 33px;
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -361,6 +362,7 @@ footer {
 
 .slider:before {
   background-color: #fff;
+  border-radius: 50%;
   bottom: 2px;
   content: '';
   height: 29px;
@@ -383,14 +385,6 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(20px);
   transform: translateX(20px)
-}
-
-.slider.round {
-  border-radius: 33px
-}
-
-.slider.round:before {
-  border-radius: 50%
 }
 
 /* responsive
