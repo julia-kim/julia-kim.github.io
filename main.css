@@ -111,8 +111,7 @@ h2 {
 ------------------------- */
 header {
   display: block;
-  margin-bottom: 1.563em;
-  margin-top: 2.063em
+  margin-bottom: 1.563em
 }
 
 .h1 {
@@ -337,7 +336,6 @@ footer {
   margin: 5px;
   position: absolute;
   right: 0;
-  top: 0;
   width: 53px
 }
 
@@ -396,10 +394,6 @@ input:checked + .slider:before {
 /* responsive
 ------------------------- */
 @media only screen and (min-width: 1024px) {
-  header {
-    margin-top: 0
-  }
-
   h1 {
     font-size: 4.375rem
   }
