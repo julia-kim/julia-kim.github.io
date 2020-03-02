@@ -10,7 +10,7 @@
   font-style: normal;
 }
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   display: inline-block;
   font-family: "fontello";
   font-style: normal;
