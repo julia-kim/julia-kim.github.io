@@ -99,21 +99,15 @@ function endGame() {
   document.getElementById("restart").innerHTML = "Play again?"
 }
 
-function resetGrid() {
+function restartGame() {
+  document.addEventListener("click", markSquare)
+  document.getElementById("status").innerHTML = origText
+  document.getElementById("restart").innerHTML = "Restart Game"
   for (var i = 0; i < squares.length; i++) {
     squares[i].innerHTML = ""
-    document.getElementById("status").innerHTML = origText
     document.getElementById(i).style.color = ""
     document.getElementById(i).classList.remove("animate")
-    document.getElementById("restart").innerHTML = "Restart Game"
-    currentPlayer = player1
   }
+  currentPlayer = player1
 }
-
-document.addEventListener("click", function (e) {
-  var element = e.target
-  if (element.id === "restart") {
-    resetGrid()
-    document.addEventListener("click", markSquare)
-  }
-})
+document.querySelector("#restart").addEventListener("click", restartGame)
