@@ -30,7 +30,8 @@ table {
   color: #c1c1c1;
   font-family: 'Fredoka One', 'Comic Sans MS', sans-serif;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  table-layout: fixed
 }
 
 td {
@@ -68,14 +69,21 @@ tr td:last-child {
 }
 
 .btn:active {
-  opacity: 0.5;
+  opacity: 0.5
 }
 
 .animate {
-  animation: pulse 1000ms alternate infinite;
+  animation: pulse 1000ms alternate infinite
 }
 
 @keyframes pulse {
   from { opacity: 1 }
   to { opacity: 0 }
+}
+
+@media only screen and (max-width: 380px) {
+  td {
+    height: 80px;
+    width: 80px;
+  }
 }
