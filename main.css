@@ -32,7 +32,7 @@
 .icon-codepen:before { content: '\f1cb' }
 
 :root {
-  --bg: #fff;
+  --bg-color: #fff;
   --text-color: #202020;
   --turquoise: #00f5bc;
   --orange: #f8cf48;
@@ -42,12 +42,13 @@
   --blue: #5d82f9;
   --indigo: #7546f8;
   --silver: #c1c1c1;
+  --white: #fff;
   --transition-duration-base: 0.2s;
   --transition-duration-long: 0.4s
 }
 
 html[data-theme='dark'] {
-  --bg: #202020;
+  --bg-color: #202020;
   --text-color: #fafafa
 }
 
@@ -55,7 +56,7 @@ html[data-theme='dark'] {
   background: var(--turquoise)
 }
 
-/* mouse trail
+/* mouse 
 ------------------------- */
 .pointer {
   -webkit-animation: fadeOut 1s 1;
@@ -98,7 +99,7 @@ body {
 }
 
 body {
-  background: var(--bg);
+  background: var(--bg-color);
   color: var(--text-color);
   font-family: sans-serif;
   line-height: 1.5
@@ -120,6 +121,10 @@ footer {
   max-width: 100%
 }
 
+.text {
+  margin-bottom: 1rem
+}
+
 a {
   color: var(--text-color);
   text-decoration: none
@@ -127,7 +132,8 @@ a {
 
 .link {
   background: var(--violet);
-  color: var(--text-color)
+  color: var(--text-color);
+  font-weight: 700
 }
 
 .link:hover {
@@ -273,10 +279,6 @@ nav li a:hover:after {
   padding: 0 1em
 }
 
-.about p:last-child {
-  padding-top: 1em
-}
-
 /* projects
 ------------------------- */
 img {
@@ -291,7 +293,7 @@ img {
 }
 
 .tab {
-  background-color: var(--bg);
+  background-color: var(--bg-color);
   border: 0.25em solid var(--silver);
   margin: 0;
   overflow: hidden;
@@ -326,7 +328,7 @@ img {
 }
 
 .tabcontent {
-  background-color: var(--bg);
+  background-color: var(--bg-color);
   border: 0.25em solid var(--silver);
   border-top: none;
   margin: 0 auto;
@@ -415,7 +417,7 @@ footer {
   }
 
   .slider:before {
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 50%;
     bottom: 2px;
     content: '';

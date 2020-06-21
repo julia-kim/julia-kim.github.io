@@ -52,33 +52,50 @@
   <main class="container">
     <div class="container__item about">
       <h2 id="about">Hello.</h2>
-      <p>
-        My name is Julia, and I like to make pretty things. I'm a self-taught, aspiring web developer with no real-world
-        experience and a love for learning. This website is my playground&mdash;a place where I can share, experiment,
-        and play. It will always be a work in progress. Right now I'm working on building a solid foundation with
-        vanilla <code>JS</code> and catching up on all my reading.
+      <p class="text">
+        My name is Julia, and I like to make pretty things. I'm a self-taught,
+        aspiring web developer with no real-world experience and a love for
+        learning. This website is my playground&mdash;a place where I can
+        share, experiment, and play. It will always be a work in progress.
+        Right now I'm working on building a solid foundation with vanilla
+        <code>JS</code> and catching up on all my reading.
       </p>
-      <p><b><a class="link" href="mailto:hello@julia.kim?">Hire me</a>.</b></p>
+      <p class="text">
+        My stack: 
+        <code>HTML5</code>, <code>CSS3</code>, <code>SCSS</code>, 
+        <code>Bootstrap</code>, <code>JS</code>, <code>Python</code>, 
+        <code>PostgreSQL</code>, <code>Flask</code>, <code>Jinja2</code>, 
+        <code>Git</code>
+      </p>
+      <p><a class="link" href="mailto:hello@julia.kim?">Hire me</a>.</p>
     </div>
     <div class="container__item projects">
       <h2 id="projects">Some stuff.</h2>
       <div class="wrapper">
         <div class="tab">
-          <button class="tablinks" onclick="openProject(event, 'project-1')" id="defaultOpen">1</button>
-          <button class="tablinks" onclick="openProject(event, 'project-2')">2</button>
-          <button class="tablinks" onclick="openProject(event, 'project-3')">3</button>
-          <button class="tablinks" onclick="openProject(event, 'project-4')">4</button>
-          <button class="tablinks" onclick="openProject(event, 'project-5')">5</button>
+          <button class="tablinks" onclick="openProject(event, 'novel-reaction')" id="defaultOpen">1</button>
+          <button class="tablinks" onclick="openProject(event, 'tic-tac-toe')">2</button>
+          <button class="tablinks" onclick="openProject(event, 'away-messages')">3</button>
+          <button class="tablinks" onclick="openProject(event, 'calc-date-tools')">4</button>
+          <button class="tablinks" onclick="openProject(event, 'korean-flag')">5</button>
+          <button class="tablinks" onclick="openProject(event, 'tietnguyen')">6</button>
         </div>
-        <div id="project-1" class="tabcontent">
-          <a href="projects/tictactoe/index.html" target="_blank" rel="noopener noreferrer"
-            title="JS Tic Tac Toe"><img src="img/tictactoe.png" alt=""></a>
+        <div id="novel-reaction" class="tabcontent">
+          <a href="https://novel-reaction.herokuapp.com/" title="NOVEL REACTION">
+            <img src="https://d33wubrfki0l68.cloudfront.net/3582bf0fa5d2ffd012863d70c4cd5617351a95c1/50ba2/img/novel-reaction.png" alt="" />
+          </a>
         </div>
-        <div id="project-2" class="tabcontent">
-          <a href="projects/away-messages/index.html" target="_blank" rel="noopener noreferrer"
-            title="AIM Away Messages restored"><img src="img/away.png" alt=""></a>
+        <div id="tic-tac-toe" class="tabcontent">
+          <a href="projects/tictactoe/index.html"title="JS Tic Tac Toe">
+            <img src="img/tictactoe.png" alt="">
+          </a>
         </div>
-        <div id="project-3" class="tabcontent">
+        <div id="away-messages" class="tabcontent">
+          <a href="projects/away-messages/index.html"title="AIM Away Messages restored">
+            <img src="img/away.png" alt="">
+          </a>
+        </div>
+        <div id="calc-date-tools" class="tabcontent">
           <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="juliakim"
             data-slug-hash="QWWQraE"
             style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -89,7 +106,7 @@
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
         </div>
-        <div id="project-4" class="tabcontent">
+        <div id="korean-flag" class="tabcontent">
           <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="juliakim"
             data-slug-hash="KKKQRea"
             style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -100,9 +117,10 @@
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
         </div>
-        <div id="project-5" class="tabcontent">
-          <a href="https://tietnguyen.com/" target="_blank" rel="noopener noreferrer"
-            title="An online writing portfolio made for a dear friend"><img src="img/tietnguyen.com.png" alt=""></a>
+        <div id="tietnguyen" class="tabcontent">
+          <a href="https://tietnguyen.com/"title="An online writing portfolio made for a dear friend">
+            <img src="img/tietnguyen.com.png" alt="">
+          </a>
         </div>
       </div>
     </div>
@@ -123,7 +141,7 @@
         <i class="icon-codepen"></i>
       </a>
       <p>
-        <b><a href="mailto:hello@julia.kim?subject=Hi%20Julia" class="link">hello@julia.kim</a></b>
+        <a href="mailto:hello@julia.kim?subject=Hi%20Julia" class="link">hello@julia.kim</a>
       </p>
     </div>
   </main>
