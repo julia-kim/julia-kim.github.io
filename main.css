@@ -115,7 +115,7 @@ footer {
   text-align: center
 }
 
-.container__item {
+.box {
   font-size: 1rem;
   margin: 0 auto 2.188em;
   max-width: 100%
@@ -235,16 +235,16 @@ nav {
   margin-top: 0.625em
 }
 
-nav ul {
+.nav {
   list-style: none
 }
 
-nav li {
+.nav-item {
   display: inline;
   padding: 0 0.5em
 }
 
-nav li a {
+.nav-link {
   color: var(--text-color);
   font-weight: 400;
   position: relative;
@@ -252,7 +252,7 @@ nav li a {
   text-transform: lowercase
 }
 
-nav li a:after {
+.nav-link:after {
   background: var(--orange);
   bottom: -0.188em;
   content: '';
@@ -265,7 +265,7 @@ nav li a:after {
   width: 0
 }
 
-nav li a:hover:after {
+.nav-link:hover:after {
   -webkit-transition: var(--transition-duration-base) ease all;
   transition: var(--transition-duration-base) ease all;
   visibility: visible;
@@ -323,17 +323,37 @@ img {
   border-left: none
 }
 
-.tablinks {
+.tab-link {
   font-weight: 700
 }
 
-.tabcontent {
+.tab-content {
   background-color: var(--bg-color);
   border: 0.25em solid var(--silver);
   border-top: none;
   margin: 0 auto;
   padding: 0;
   width: 100%
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+.grid > a {
+  border-top: 0.25rem solid var(--silver);
+  font-weight: 700;
+  padding: 0.875em 1em;
+  text-transform: lowercase;
+}
+
+.grid > a:first-child {
+  border-right: 0.25rem solid var(--silver)
+}
+
+.grid > a:hover {
+  background-color: var(--turquoise)
 }
 
 /* footer
@@ -462,7 +482,7 @@ footer {
   }
 
   .tab,
-  .tabcontent {
+  .tab-content {
     background-color: #202020
   }
 }

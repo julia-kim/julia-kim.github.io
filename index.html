@@ -42,15 +42,15 @@
     </h1>
     <nav>
       <ul class="nav">
-        <li class="nav__item"><a href="/">Home</a></li>
-        <li class="nav__item"><a href="#about">About</a></li>
-        <li class="nav__item"><a href="#projects">Projects</a></li>
-        <li class="nav__item"><a href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main class="container">
-    <div class="container__item about">
+    <div class="box about">
       <h2 id="about">Hello.</h2>
       <p class="text">
         My name is Julia, and I like to make pretty things. I'm a self-taught,
@@ -69,38 +69,45 @@
       </p>
       <p><a class="link" href="mailto:hello@julia.kim?">Hire me</a>.</p>
     </div>
-    <div class="container__item projects">
+    <div class="box projects">
       <h2 id="projects">Some stuff.</h2>
       <div class="wrapper">
         <div class="tab">
-          <button class="tablinks" onclick="openProject(event, 'word-finder')" id="defaultOpen">1</button>
-          <button class="tablinks" onclick="openProject(event, 'novel-reaction')">2</button>
-          <button class="tablinks" onclick="openProject(event, 'tic-tac-toe')">3</button>
-          <button class="tablinks" onclick="openProject(event, 'away-messages')">4</button>
-          <button class="tablinks" onclick="openProject(event, 'calc-date-tools')">5</button>
-          <button class="tablinks" onclick="openProject(event, 'tietnguyen')">6</button>
+          <button class="tab-link" onclick="openProject(event, 'word-finder')" id="defaultOpen">1</button>
+          <button class="tab-link" onclick="openProject(event, 'novel-reaction')">2</button>
+          <button class="tab-link" onclick="openProject(event, 'tictactoe')">3</button>
+          <button class="tab-link" onclick="openProject(event, 'away-messages')">4</button>
+          <button class="tab-link" onclick="openProject(event, 'calc-date-tools')">5</button>
         </div>
-        <div id="word-finder" class="tabcontent">
-          <a href="projects/word-finder/index.html" title="Word Finder">
-            <img src="img/word-finder.png">
-          </a>
+        <div id="word-finder" class="tab-content">
+          <img src="img/word-finder.png" alt=""/>
+          <div class=grid>
+            <a href="https://github.com/julia-kim/word-finder">View Repo</a>
+            <a href="https://julia-kim.github.io/word-finder/">View Demo</a>
+          </div>
         </div>
-        <div id="novel-reaction" class="tabcontent">
-          <a href="https://novel-reaction.herokuapp.com/" title="NOVEL REACTION">
-            <img src="img/novel-reaction.png" alt="" />
-          </a>
+        <div id="novel-reaction" class="tab-content">
+          <img src="img/novel-reaction.png" alt="" />
+          <div class=grid>
+            <a href="https://github.com/julia-kim/novel-reaction">View Repo</a>
+            <a href="https://novel-reaction.herokuapp.com/">View Demo</a>
+          </div>
         </div>
-        <div id="tic-tac-toe" class="tabcontent">
-          <a href="projects/tictactoe/index.html"title="JS Tic Tac Toe">
-            <img src="img/tictactoe.png" alt="">
-          </a>
+        <div id="tictactoe" class="tab-content">
+          <img src="img/tictactoe.png" alt="">
+          <div class=grid>
+            <a href="https://github.com/julia-kim/julia.kim/tree/master/projects/tictactoe">View Repo</a>
+            <a href="projects/tictactoe/index.html">View Demo</a>
+          </div>
         </div>
-        <div id="away-messages" class="tabcontent">
-          <a href="projects/away-messages/index.html"title="AIM Away Messages restored">
-            <img src="img/away.png" alt="">
-          </a>
+        <div id="away-messages" class="tab-content">
+          <img src="img/away.png" alt="">
+          <div class=grid>
+            <a href="https://github.com/julia-kim/away-messages">View Repo</a>
+            <a href="https://julia-kim.github.io/away-messages/">View Demo</a>
+          </div>
         </div>
-        <div id="calc-date-tools" class="tabcontent">
+        <div id="calc-date-tools" class="tab-content">
           <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="juliakim"
             data-slug-hash="QWWQraE"
             style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -111,14 +118,9 @@
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
         </div>
-        <div id="tietnguyen" class="tabcontent">
-          <a href="https://tietnguyen.com/"title="An online writing portfolio made for a dear friend">
-            <img src="img/tietnguyen.com.png" alt="">
-          </a>
-        </div>
       </div>
     </div>
-    <div class="container__item social">
+    <div class="box social">
       <h2 id="contact">Get in touch.</h2>
       <a href="https://github.com/julia-kim" target="_blank" rel="noopener noreferrer" class="share-btn github">
         <i class="icon-github"></i>
