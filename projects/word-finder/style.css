@@ -1,0 +1,189 @@
+*,
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-size: 2.625rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board {
+  margin: 0 auto;
+  position: relative;
+  width: 21.375rem;
+}
+
+table {
+  background-color: #333;
+  border: 0.125rem solid #333;
+  border-radius: 0.313rem;
+  font-size: 2.25rem;
+  font-weight: 900;
+  height: 21.375rem;
+  table-layout: fixed;
+  text-align: center;
+  width: 21.375rem;
+}
+
+.tile {
+  background-color: #fbfbfb;
+  border: 0.063rem solid transparent;
+  border-radius: 0.313rem;
+  height: 16.66667%;
+  padding: 0;
+  width: 16.66667%;
+}
+
+.tile:hover {
+  cursor: pointer;
+}
+
+.chosen {
+  background-color: #1288ff;
+  color: #fbfbfb;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+#word {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.063rem;
+  margin-top: 0.313rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: #333;
+  border: 0.063rem solid #fbfbfb;
+  border-radius: 0.313rem;
+  color: #fbfbfb;
+  float: right;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.063rem;
+  margin-top: 0.313rem;
+  padding: 0.375rem 1.25rem;
+  text-transform: uppercase;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0.125rem 0.125rem #333;
+}
+
+.word-list {
+  font-size: 1.125rem;
+  font-weight: 500;
+  height: 100%;
+  list-style: none;
+  max-height: 20.313rem;
+  overflow-y: scroll;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.word-list > li {
+  padding: 0.125rem 0;
+}
+
+.overlay {
+  background-color: rgba(20, 20, 20, 0.5);
+  height: calc(100% + .75rem);
+  left: -0.375rem;
+  position: absolute;
+  top: -0.375rem;
+  width: calc(100% + .75rem);
+  z-index: 99;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0.188em 0.188em 0.125rem #000;
+  width: 100%;
+}
+
+.overlay p:hover {
+  color: #d3d3d3;
+  cursor: pointer;
+}
+
+#start-game {
+  font-size: 2.25rem;
+  margin-top: 50%;
+}
+
+#game-over {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.device-only {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 0 3.125rem 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  body {
+    align-items: center;
+    background-color: #333;
+    color: #fbfbfb;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .container {
+    display: none;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .device-only {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
