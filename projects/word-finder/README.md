@@ -1,7 +1,7 @@
 # Word Finder
 Word Finder is a simple HTML5 game in which a player tries to score as many points as possible by forming words within a 2-minute time limit.
 
-Word lists were downloaded from [Word Game Dictionary](https://www.wordgamedictionary.com/word-lists/)
+Word lists were downloaded from [Word Game Dictionary](https://www.wordgamedictionary.com/word-lists/).
 
 ## Motivation
 I love word games! Scrabble, Boggle, Bananagrams, crossword puzzles—you name it. In particular, I play a lot of word games against friends on my phone. I created this game as a one-player desktop alternative while I wait for my friends to finally make their moves. 
