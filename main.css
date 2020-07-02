@@ -20,8 +20,6 @@
   text-decoration: inherit;
   text-align: center;
   text-transform: none;
- 
-  /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
@@ -32,8 +30,8 @@
 .icon-codepen:before { content: '\f1cb' }
 
 :root {
-  --bg-color: #fff;
-  --text-color: #202020;
+  --bg-color: var(--white);
+  --text-color: var(--black);
   --turquoise: #00f5bc;
   --orange: #f8cf48;
   --pink: #fcaae6;
@@ -43,13 +41,18 @@
   --indigo: #7546f8;
   --silver: #c1c1c1;
   --white: #fff;
+  --black: #202020;
   --transition-duration-base: 0.2s;
   --transition-duration-long: 0.4s
 }
 
 html[data-theme='dark'] {
-  --bg-color: #202020;
-  --text-color: #fafafa
+  --bg-color: var(--black);
+  --text-color: var(--white)
+}
+
+::-moz-selection {
+  background: var(--turquoise)
 }
 
 ::selection {
@@ -65,7 +68,6 @@ html[data-theme='dark'] {
   height: 40px;
   pointer-events: none;
   position: fixed;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 40px;
   z-index: -1
@@ -87,7 +89,6 @@ html[data-theme='dark'] {
 ------------------------- */
 *,
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0
@@ -102,16 +103,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   font-family: sans-serif;
-  line-height: 1.5
-}
-
-div,
-.h1,
-h1,
-h2,
-p,
-.nav,
-footer {
+  line-height: 1.5;
   text-align: center
 }
 
@@ -141,7 +133,7 @@ a {
 }
 
 .switch {
-  display: none;
+  display: none
 }
 
 /* typography
@@ -230,25 +222,20 @@ h1 {
 
 /* navigation
 ------------------------- */
-nav {
-  line-height: 2;
-  margin-top: 0.625em
-}
-
 .nav {
-  list-style: none
+  list-style: none;
+  margin-top: 0.625em
 }
 
 .nav-item {
   display: inline;
+  line-height: 2;
   padding: 0 0.5em
 }
 
 .nav-link {
-  color: var(--text-color);
   font-weight: 400;
   position: relative;
-  text-decoration: none;
   text-transform: lowercase
 }
 
@@ -259,14 +246,12 @@ nav {
   height: 0.125em;
   left: 0;
   position: absolute;
-  -webkit-transition: var(--transition-duration-base) ease all 0s;
   transition: var(--transition-duration-base) ease all 0s;
   visibility: hidden;
   width: 0
 }
 
 .nav-link:hover:after {
-  -webkit-transition: var(--transition-duration-base) ease all;
   transition: var(--transition-duration-base) ease all;
   visibility: visible;
   width: 100%
@@ -332,7 +317,6 @@ img {
   border: 0.25em solid var(--silver);
   border-top: none;
   margin: 0 auto;
-  padding: 0;
   width: 100%
 }
 
@@ -342,14 +326,14 @@ img {
 }
 
 .grid > a {
-  border-top: 0.25rem solid var(--silver);
+  border-top: 0.25em solid var(--silver);
   font-weight: 700;
   padding: 0.875em 1em;
   text-transform: lowercase;
 }
 
 .grid > a:first-child {
-  border-right: 0.25rem solid var(--silver)
+  border-right: 0.25em solid var(--silver)
 }
 
 .grid > a:hover {
@@ -400,7 +384,6 @@ footer {
   }
 
   .wrapper {
-    -webkit-box-shadow: 1em 1em var(--pink);
     box-shadow: 1em 1em var(--pink);
     width: 50%
   }
@@ -432,7 +415,6 @@ footer {
     position: absolute;
     right: 0;
     top: 0;
-    -webkit-transition: 0.4s;
     transition: 0.4s
   }
 
@@ -444,7 +426,6 @@ footer {
     height: 29px;
     left: 2px;
     position: absolute;
-    -webkit-transition: 0.4s;
     transition: 0.4s;
     width: 29px
   }
@@ -454,35 +435,33 @@ footer {
   }
 
   input:focus + .slider {
-    -webkit-box-shadow: 0 0 1px var(--turquoise);
     box-shadow: 0 0 1px var(--turquoise)
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(20px);
     transform: translateX(20px)
   }
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #202020;
-    color: #fafafa
+    background-color: var(--black);
+    color: var(--white)
   }
 
   a,
   .link,
   nav li a,
   .tab button {
-  color: #fafafa
+  color: var(--white)
   }
 
   .letter {
-    -webkit-text-stroke: 0.029em #fafafa
+    -webkit-text-stroke: 0.029em var(--white)
   }
 
   .tab,
   .tab-content {
-    background-color: #202020
+    background-color: var(--black)
   }
 }
